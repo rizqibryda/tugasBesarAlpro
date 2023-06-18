@@ -141,17 +141,17 @@ func nilaiMahasiswa(mhs *NMahasiswa, i int) { // menilai apakah mahasiswa terseb
 
 func listMahasiswa(choiceAdmin *int, mhs NMahasiswa, i int, kesekian int) { // menampilkan list mahasiswa berdasarkan pilihan pengguna
 
-	if *choiceAdmin == 1 {													// menampilkan list data camaba dari nama
+	if *choiceAdmin == 1 {			// menampilkan list data camaba dari nama
 		for i = 1; i <= NMAX && mhs[i].nama != ""; i++ {
 			fmt.Println(i, "-", mhs[i].nama)
 		}
 		fmt.Println("==========================")
-	} else if *choiceAdmin == 2 {											// menampilkan list data camaba dari jurusan
+	} else if *choiceAdmin == 2 {		// menampilkan list data camaba dari jurusan
 		for i = 1; i <= NMAX && mhs[i].jurusan.namaJurusan != ""; i++ {
 			fmt.Println(i, "-", mhs[i].jurusan.namaJurusan)
 		}
 		fmt.Println("==========================")
-	} else if *choiceAdmin == 3 {											// menampilkan list data camaba dari nilai
+	} else if *choiceAdmin == 3 {		// menampilkan list data camaba dari nilai
 		for i = 1; i <= NMAX && mhs[i].nilai != 0; i++ {
 			fmt.Println(i, "-", mhs[i].nilai)
 		}
@@ -160,7 +160,7 @@ func listMahasiswa(choiceAdmin *int, mhs NMahasiswa, i int, kesekian int) { // m
 		for i = 1; i <= NMAX && mhs[i].nama != ""; i++ {
 			fmt.Println(i, "-", mhs[i].nama, "dari jurusan", mhs[i].jurusan.namaJurusan, "dinyatakan", mhs[i].status, "dengan nilai", mhs[i].nilai)
 		}
-	} else if *choiceAdmin == 0 {											// balik ke switchProgram atau options
+	} else if *choiceAdmin == 0 {		// balik ke switchProgram atau options
 		fmt.Println("==========================")
 		fmt.Println("Sampai jumpa, Admin!")
 	} else {
