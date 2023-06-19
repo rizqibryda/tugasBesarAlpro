@@ -76,7 +76,7 @@ func main() { // program utama
 			fmt.Println("0. Keluar dari sebagai admin")
 			fmt.Println("1. List mahasiswa baru berdasarkan nama")
 			fmt.Println("2. List mahasiswa baru berdasarkan jurusan")
-			fmt.Println("3. List mahasiswa baru berdasarkan nilai")
+			fmt.Println("3. List mahasiswa baru berdasarkan nilai dan status")
 			fmt.Println("4. List mahasiswa baru semuanya")
 			fmt.Print("Pilihan: ")
 			fmt.Scan(&pilihan_admin) // pengguna diminta oleh dari 4 opsi yang tersedia
@@ -148,7 +148,7 @@ func listMahasiswa(choiceAdmin *int, mhs NMahasiswa, i int, kesekian int) { // m
 		fmt.Println("==========================")
 	} else if *choiceAdmin == 3 {		// menampilkan list data camaba dari nilai
 		for i = 1; i <= NMAX && mhs[i].nilai != 0; i++ {
-			fmt.Println(i, "-", mhs[i].nilai)
+			fmt.Println(i, "-", mhs[i].nilai, "dengan status", mhs[i].status)
 		}
 		fmt.Println("==========================")
 	} else if *choiceAdmin == 4 {		// menampilkan list seluruh data tiap camaba
