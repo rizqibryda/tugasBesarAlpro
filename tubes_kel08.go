@@ -48,6 +48,8 @@ func main() { // program utama
 	for add[i] == 1 || add[i] == 2 {
 		for add[i] == 1 {
 			i++
+
+			fmt.Println("===============")
 			fmt.Print("\nMasukkan data nama mahasiswa (JANGAN menggunakan spasi): ") // Masukkan data nama camaba
 			fmt.Scan(&mhs[i].nama)
 
@@ -62,13 +64,6 @@ func main() { // program utama
 
 			switchProgram(&kesekian)
 			add[i] = kesekian
-
-			// add[i] = 0
-			// i++ atau i + 1
-			// add[i] = 1
-			//			input nama = rizqi
-			//			input jurusan =  10 → Sistem Informasi
-			//			input nilai = 65
 		}
 
 		for add[i] == 2 {
@@ -89,7 +84,7 @@ func main() { // program utama
 			if pilihan_admin >= 1 && pilihan_admin <= 4 {
 				listMahasiswa(&pilihan_admin, mhs, i, kesekian) // DILIHAT KEMBALI
 				konfirmasi(&pilihan_admin, &kesekian)
-				if pilihan_admin == 1 {
+				if pilihan_admin == 1 && kesekian != -1 {
 					dataMahasiswa(mhs, kesekian)
 					gantiHapusMahasiswa(pilihan_admin, &mhs, kesekian, &change, &i)
 				}
