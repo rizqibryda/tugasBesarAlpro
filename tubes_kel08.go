@@ -248,8 +248,6 @@ func gantiHapusMahasiswa(choiceAdmin int, mhs *NMahasiswa, kesekian int, ubah *a
 		fmt.Println("==========================")
 		gantiHapusMahasiswa(choiceAdmin, mhs, kesekian, ubah, i)
 	}
-
-	ubah.TINDAKAN = -9
 }
 
 func listJurusanMahasiswa() {
