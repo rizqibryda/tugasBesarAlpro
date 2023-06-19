@@ -153,7 +153,7 @@ func listMahasiswa(choiceAdmin *int, mhs NMahasiswa, i int, kesekian int) { // m
 		fmt.Println("==========================")
 	} else if *choiceAdmin == 4 {		// menampilkan list seluruh data tiap camaba
 		for i = 1; i <= NMAX && mhs[i].nama != ""; i++ {
-			fmt.Println(i, "-", mhs[i].nama, "dari jurusan", mhs[i].jurusan.namaJurusan, "dinyatakan", mhs[i].status, "dengan nilai", mhs[i].nilai)
+			fmt.Println("Nilai", i, "-", mhs[i].nama, "dari jurusan", mhs[i].jurusan.namaJurusan, "dinyatakan", mhs[i].status, "dengan nilai", mhs[i].nilai)
 		}
 	} else if *choiceAdmin == 0 {		// balik ke switchProgram atau options
 		fmt.Println("==========================")
